@@ -1,0 +1,9 @@
+<!--miniprogram/pages/task/task.wxml-->
+<!-- 顶部导航栏 -->
+<mp-navigation-bar loading="{{loading}}" show="{{show}}" animated="{{animated}}" color="{{color}}" background="{{background}}" title="任务" back="{{true}}"></mp-navigation-bar>
+
+<!-- tab标签点击事件 -->
+<van-tabs bind:click="onClick">
+  <van-tab title="未完成">未完成任务列表</van-tab>
+  <van-tab title="已完成">已完成任务列表</van-tab>
+</van-tabs>

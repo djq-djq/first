@@ -1,0 +1,2 @@
+<!--miniprogram/pages/project/project.wxml-->
+<mp-navigation-bar loading="{{loading}}" show="{{show}}" animated="{{animated}}" color="{{color}}" background="{{background}}" title="项目" back="{{true}}"></mp-navigation-bar>

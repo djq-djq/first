@@ -1,0 +1,11 @@
+
+{
+
+  "usingComponents": {
+    "mp-navigation-bar": "../components/navigation-bar/navigation-bar",
+    "van-tab": "../dist/tab/index",
+    "van-tabs": "../dist/tabs/index"
+  },
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "任务"
+}

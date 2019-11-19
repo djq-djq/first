@@ -1,0 +1,2 @@
+<!--miniprogram/pages/add/add.wxml-->
+<text>miniprogram/pages/add/add.wxml</text><mp-navigation-bar loading="{{loading}}" show="{{show}}" animated="{{animated}}" color="{{color}}" background="{{background}}" title="新建" back="{{true}}"></mp-navigation-bar>

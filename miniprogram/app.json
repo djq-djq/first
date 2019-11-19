@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/my/index/index",
+    "pages/my/logs/logs",
+    "pages/task/task",
+    "pages/project/project",
+    "pages/add/add",
+    "pages/message/message"
+  ],
+  "window": {
+    "navigationStyle":"default",
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+ 
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#4682B4",
+    "list": [
+      {
+        "pagePath": "pages/task/task",
+        "text": "任务",
+        "iconPath": "images/task.png",
+        "selectedIconPath": "images/task-active.png"
+      },
+      {
+        "pagePath": "pages/project/project",
+        "text": "项目",
+        "iconPath": "images/project.png",
+        "selectedIconPath": "images/project-active.png"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "iconPath": "images/add.png",
+        "selectedIconPath": "images/add-active.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "images/message.png",
+        "selectedIconPath": "images/message-active.png"
+      },
+      {
+        "pagePath": "pages/my/index/index",
+        "text": "我",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
