@@ -6,7 +6,7 @@
   justify-content: space-between;
   padding: 100rpx 0;
   box-sizing: border-box;
-  background:#4682B4;
+  background:#FFFFFF;
 } 
 
 .userinfo {
