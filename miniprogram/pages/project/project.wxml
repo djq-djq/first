@@ -1,2 +1,19 @@
-<!--miniprogram/pages/project/project.wxml-->
+<!-- 顶部导航栏 -->
 <mp-navigation-bar loading="{{loading}}" show="{{show}}" animated="{{animated}}" color="{{color}}" background="{{background}}" title="项目" back="{{true}}"></mp-navigation-bar>
+
+<!-- 顶部搜索框 -->
+<van-search
+  value="{{ value }}"
+  placeholder="请输入搜索项目关键词"
+  use-action-slot
+  bind:search="onSearch"
+>
+ <view field-class="search" slot="action" bind:tap="onSearch">搜索</view>
+</van-search>
+
+
+<!-- tab标签点击事件 -->
+<van-tabs color="#4682B4" bind:click="onClick">
+  <van-tab title="进行中">未完成项目列表</van-tab>
+  <van-tab title="已完成">已完成项目列表</van-tab>
+</van-tabs>

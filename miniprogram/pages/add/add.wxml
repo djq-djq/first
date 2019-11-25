@@ -1,2 +1,12 @@
-<!--miniprogram/pages/add/add.wxml-->
-<text>miniprogram/pages/add/add.wxml</text><mp-navigation-bar loading="{{loading}}" show="{{show}}" animated="{{animated}}" color="{{color}}" background="{{background}}" title="新建" back="{{true}}"></mp-navigation-bar>
+<!-- 顶部导航栏 -->
+<mp-navigation-bar loading="{{loading}}" show="{{show}}" animated="{{animated}}" color="{{color}}" background="{{background}}" title="新建" back="{{true}}"></mp-navigation-bar>
+
+<!-- 顶部搜索框 -->
+<van-search
+  value="{{ value }}"
+  placeholder="请输入搜索项目ID"
+  use-action-slot
+  bind:search="onSearch"
+>
+  <view field-class="search" slot="action" bind:tap="onSearch">搜索</view>
+</van-search>

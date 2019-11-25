@@ -1,0 +1,96 @@
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #ededed;
+  border-top: 1px solid #ededed;
+  padding-bottom: 5px;
+}
+
+.taskAndPro {
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx 0 14rpx 20rpx;
+}
+
+.taskImg {
+  width: 85rpx;
+  height: 85rpx;
+  vertical-align: middle;
+  margin-right: 30rpx;
+  margin-left: 10rpx;
+  margin-top:10rpx;
+}
+
+.taskName{
+  font-size: 40rpx;
+  color:#4682B4;
+  margin-top:10rpx;
+  margin-bottom: 5rpx;
+  font-weight:bold;
+  font-family: "微软雅黑"
+  
+}
+
+.proName{
+  font-size:25rpx;
+  color:#808080;
+}
+.statusAndmanager {
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx 0 20rpx 20rpx;
+}
+
+.status{
+  display: flex;
+  flex-direction: row;
+ width:50%;
+}
+
+.statusImg {
+  margin: 10rpx 35rpx 10rpx 20rpx;
+  width: 70rpx;
+  height: 70rpx;
+  vertical-align: middle;
+}
+
+
+.status-date{
+  font-size:20rpx;
+   color:#000;
+   margin-top:5rpx;
+}
+
+.manager{
+   display: flex;
+  flex-direction: row;
+}
+
+.managerImg {
+  margin: 10rpx 35rpx 10rpx 10rpx;
+  width: 70rpx;
+  height: 70rpx;
+  vertical-align: middle;
+}
+
+.manager-content{
+  font-size:25rpx;
+  color:#959fae;
+}
+
+.manager-name{
+font-size: 25rpx;
+color:#000000;
+margin-top:5rpx;
+margin-right: 75rpx;
+}
+
+.more{
+  width:60rpx;
+  height:60rpx;
+  margin: 10rpx 10rpx 10rpx 0;
+}

@@ -1,4 +1,4 @@
-// miniprogram/pages/task/task.js
+var taskData=require('../../data/task-data.js')
 Page({
 
   /**
@@ -9,7 +9,8 @@ Page({
     color: '#000',
     background: '#f8f8f8',
     show: true,
-    animated: false
+    animated: false,
+    task_key:[],
   },
 
   onClick(event) {
@@ -20,7 +21,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    //获取服务器内的数据
+    //获取数据文件task-data.js
+    this.setData({
+      task_key: taskData.taskList
+      });
   },
 
   /**
