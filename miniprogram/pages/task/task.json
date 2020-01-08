@@ -1,12 +1,13 @@
 
 {
 
+"navigationBarTitleText": "任务",
   "usingComponents": {
-    "mp-navigation-bar": "../components/navigation-bar/navigation-bar",
-    "van-tab": "../dist/tab/index",
-    "van-tabs": "../dist/tabs/index",
-    "van-search": "../dist/search/index"
-  },
-  "navigationStyle": "custom",
-  "navigationBarTitleText": "任务"
+   
+    "van-tab": "../../dist/tab/index",
+    "van-tabs": "../../dist/tabs/index",
+    "van-search": "../../dist/search/index"
+  }
+ 
+
 }

@@ -47,6 +47,55 @@
 					"id": -1,
 					"name": "task",
 					"pathName": "pages/task/task",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "taskdetail",
+					"pathName": "pages/task/task-detail/task-detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pro",
+					"pathName": "pages/project/project",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "add",
+					"pathName": "pages/add/add",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "addPro",
+					"pathName": "pages/add/addPro/addPro",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "components/select/select",
+					"pathName": "components/select/select",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/index/index",
+					"pathName": "pages/my/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "addTask",
+					"pathName": "pages/add/addTask/addTask",
 					"scene": null
 				}
 			]

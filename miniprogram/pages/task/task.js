@@ -5,16 +5,37 @@ Page({
    * 页面的初始数据
    */
   data: {
-    loading: false,
-    color: '#000',
-    background: '#f8f8f8',
-    show: true,
-    animated: false,
     task_key:[],
+    containerShow: true,
+    searchPanelShow: false,
   },
 
   onClick(event) {
    
+  },
+
+  //搜索
+  onSearch(){
+    this.setData({
+      containerShow: false,
+      searchPanelShow: true,
+    })
+  },
+
+  onCancel() {
+    this.setData({
+      containerShow: true,
+      searchPanelShow: false,
+    })
+  },
+
+//页面跳转到详情
+  taskTap:function(event){
+    var taskId=event.currentTarget.dataset.taskid//注意此处taskid要小写！
+    //console.log(taskId);
+    wx.navigateTo({
+      url:"task-detail/task-detail?id=" + taskId//相对路径
+    })
   },
 
   /**

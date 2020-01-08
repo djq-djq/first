@@ -1,1 +1,14 @@
-/* miniprogram/pages/add/add.wxss */
+.add {
+   height: 50%;
+  width: 100%;
+  font-size: 40rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.add1 {
+  font-size: 40rpx;
+  text-align: center;
+   line-height: 100rpx;
+ border-top:1px solid #e0e3da;
+}

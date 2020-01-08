@@ -1,12 +1,8 @@
 //app.js
 App({
-  // data: {
-  //   active: 0,
-  //   icon: {
-  //     normal: 'https://img.yzcdn.cn/vant/user-inactive.png',
-  //     active: 'https://img.yzcdn.cn/vant/user-active.png'
-  //   }
-  // },
+  globalData: {
+    apiUrl: "",//服务器url
+  },
   onLaunch: function () {
     
     if (!wx.cloud) {
@@ -53,9 +49,7 @@ App({
       }
     })
   },
-  globalData: {
-    userInfo: null
-  },
+
 
   
   // onChange(event) {

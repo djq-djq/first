@@ -1,12 +1,28 @@
-<!-- 顶部导航栏 -->
-<mp-navigation-bar loading="{{loading}}" show="{{show}}" animated="{{animated}}" color="{{color}}" background="{{background}}" title="新建" back="{{true}}"></mp-navigation-bar>
 
 <!-- 顶部搜索框 -->
 <van-search
   value="{{ value }}"
-  placeholder="请输入搜索项目ID"
-  use-action-slot
+  placeholder="请输入搜索任务关键词"
+  show-action
   bind:search="onSearch"
->
-  <view field-class="search" slot="action" bind:tap="onSearch">搜索</view>
-</van-search>
+  bind:cancel="onCancel"
+/>
+
+<!-- 搜索界面 -->
+<view wx:if="{{searchPanelShow}}">
+sousuo
+</view>
+
+<!-- 弹出层 -->
+  <van-cell title="新建" is-link bind:click="showPopup" wx:if="{{containerShow}}" />
+  <van-popup
+  show="{{ show }}"
+  round
+  position="bottom"
+  custom-style="height: 20%"
+  bind:close="onClose"
+  >
+<view class="add" catchtap="addPro">新建项目</view>
+<view class="add1" catchtap="addTask">新建任务</view>
+</van-popup>
+

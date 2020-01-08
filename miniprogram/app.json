@@ -1,20 +1,23 @@
 {
   "pages": [
+   
     "pages/my/index/index",
     "pages/my/logs/logs",
     "pages/task/task",
     "pages/project/project",
     "pages/add/add",
-    "pages/message/message"
+    "pages/message/message",
+    "pages/task/task-detail/task-detail",
+    "pages/project/pro-detail/pro-detail",
+    "pages/add/addPro/addPro",
+    "pages/add/addTask/addTask"
   ],
   "window": {
-    "navigationStyle":"default",
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black"
   },
- 
   "tabBar": {
     "color": "#000",
     "selectedColor": "#4682B4",

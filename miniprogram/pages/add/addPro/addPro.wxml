@@ -1,0 +1,46 @@
+
+<view class="addp-container">
+	<form bindsubmit="formSubmit">
+		<view class="line">
+			<view class="content">项目名称:</view>
+			<view class="biankuang">
+				<input name="proName"  bindinput="bindproNameInput" placeholder="请输入项目名称"/>
+			</view>
+		</view>
+
+		<view class="line">
+			<view class="content">计划开始时间:  </view>
+			<view>
+				<picker class="biankuang" name="pstartDate" mode="date" value="{{pstartDate}}" start="2019-09-01" end="2050-09-01" bindchange="bindpstartDateChange">{{pstartDate}}
+				</picker>
+			</view>	
+		</view>
+
+		<view class="line">
+			<view class="content">计划结束时间:  </view>
+			<view>
+				<picker class="biankuang" name="pendDate" mode="date" value="{{pendDate}}" start="2019-09-01" end="2050-09-01" bindchange="bindpendDateChange">{{pendDate}}
+				</picker>
+			</view>	
+		</view>
+
+		<view class="line">
+			<view class="content">项目领导:</view>
+			<view class="biankuang">
+				<input name="pleader" maxlength="10" bindinput="bindpleaderInput" placeholder="请输入项目领导"/>
+			</view>
+		</view>
+
+		<view class="line">
+			<view class="uploadFile" catchtap="upLoadAction">批量导入任务</view>
+		</view>
+
+		<view class="line">
+			<view catchtap="downloadfile" style="color:#4682B4">下载模板</view>
+		</view>
+
+		<view>
+			<button class="btn-area" formType="submit">发布</button>
+		</view>
+	</form>
+</view>

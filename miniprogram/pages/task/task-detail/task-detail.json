@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "任务详情",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "van-field": "../../../dist/field/index",
+    "van-button": "../../../dist/button/index",
+    "van-uploader": "../../../dist/uploader/index",
+    "Select": "/components/select/select"
+  }
+}

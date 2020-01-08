@@ -25,7 +25,7 @@
   margin-top:10rpx;
 }
 
-.taskName{
+.proName{
   font-size: 40rpx;
   color:#4682B4;
   margin-top:10rpx;
@@ -35,10 +35,6 @@
   
 }
 
-.proName{
-  font-size:25rpx;
-  color:#808080;
-}
 .statusAndmanager {
   display: flex;
   flex-direction: row;

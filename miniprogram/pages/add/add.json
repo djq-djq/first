@@ -1,8 +1,10 @@
 {
+  "navigationBarTitleText": "新建",
   "usingComponents": {
-    "mp-navigation-bar": "../components/navigation-bar/navigation-bar",
-    "van-search": "../dist/search/index"
-  },
-  "navigationStyle": "custom",
-  "navigationBarTitleText": "新建"
+    "van-search": "../../dist/search/index",
+    "van-cell": "../../dist/cell/index",
+    "van-popup": "../../dist/popup/index"
+  }
+ 
+  
 }

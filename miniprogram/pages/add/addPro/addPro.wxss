@@ -1,0 +1,50 @@
+.addp-container{
+	display: flex;
+	flex-direction: column;
+	margin: 20rpx 15rpx 20rpx 15rpx;
+	background-color: #fff;
+	border-bottom: 1px solid #ededed;
+	border-top: 1px solid #ededed;
+	padding-bottom: 5px;
+	border-radius: 1em;
+
+}
+
+.content{
+	font-size: 30rpx;
+	color:#949dac;
+	font-family: "微软雅黑"
+}
+
+.line{
+	display: flex;
+	flex-direction: row;
+	height:64rpx;
+	margin:30rpx 0 0 30rpx;
+
+}
+
+.biankuang {
+	margin-left: 20rpx;
+	border:1px solid #e0e3da;
+	border-radius: 1em;
+	height:60rpx;
+	width: 380rpx;
+  padding: 0 25rpx;
+}
+
+.uploadFile{
+	border:1px solid #e0e3da;
+	border-radius: 1em;
+	width:280rpx;
+	height: 70rpx;
+	text-align: center;
+	line-height: 70rpx;
+}
+
+.btn-area{
+	margin: 1.17647059em 15px 0.3em;
+	background-color: #4682B4;
+	justify-content: center;
+	align-items: center;
+}

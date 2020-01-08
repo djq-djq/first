@@ -1,0 +1,18 @@
+<template name="table">
+  <view class="tableView">
+    <view class="table_header">
+      <view class="th th1">阶段</view>
+      <view class="th th2">计划工作量/h</view>
+      <view class="th th3">实际工作量/h</view>
+    </view>
+   <!--  <block> 并不是一个组件，它仅仅是一个包装元素，不会在页面中做任何渲染，只接受控制属性。 -->
+      <block wx:for="{{ proData.listData }}" wx:for-item="work" wx:key="key">
+        <view class="table_cell">
+          <view class="td td1">{{work.date}}</view>
+          <view class="td td2">{{work.time}}</view>
+          <view class="td td3">{{work.content}}</view>
+        </view>
+      </block>
+
+    </view>
+  </template>

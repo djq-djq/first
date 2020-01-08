@@ -1,20 +1,42 @@
 <import src="../../template/task-doing/task-doing-template.wxml" />
-
-<!-- 顶部导航栏 -->
-<mp-navigation-bar loading="{{loading}}" show="{{show}}" animated="{{animated}}" color="{{color}}" background="{{background}}" title="任务" back="{{true}}"></mp-navigation-bar>
+<import src="../../template/task-finish/task-finish-template.wxml" />
 
 <!-- 顶部搜索框 -->
-<van-search value="{{ value }}" placeholder="请输入搜索任务关键词" use-action-slot bind:search="onSearch">
-  <view field-class="search" slot="action" bind:tap="onSearch">搜索</view>
-</van-search>
+<van-search
+  value="{{ value }}"
+  placeholder="请输入搜索任务关键词"
+  show-action
+  bind:search="onSearch"
+  bind:cancel="onCancel"
+/>
 
 <!-- tab标签点击事件 -->
-<van-tabs color="#4682B4" bind:click="onClick">
-  <van-tab title="未完成"></van-tab>
-  <van-tab title="已完成"></van-tab>
+<van-tabs color="#4682B4" wx:if="{{containerShow}}" bind:click="onClick">
+
+  <van-tab title="进行中">
+    <block wx:for="{{task_key}}" wx:for-item="item">
+      <view wx:if="{{item.status==0}}">
+        <!-- task-item-template -->
+        <view catchtap="taskTap" data-taskId="{{item.taskId}}">
+          <template is="task-doing" data="{{...item}}" />
+        </view>
+      </view>
+    </block>
+  </van-tab>
+
+  <van-tab title="已完成">
+    <block wx:for="{{task_key}}" wx:for-item="item">
+      <view wx:if="{{item.status}}">
+        <!-- task-item-template -->
+        <view catchtap="taskTap" data-taskId="{{item.taskId}}">
+          <template is="task-finish" data="{{...item}}" />
+        </view>
+      </view>
+    </block>
+  </van-tab>
 </van-tabs>
 
-<block wx:for="{{task_key}}" wx:for-item="item">
- <!-- task-item-template -->
-<template is="task-doing" data="{{item}}"/>
-</block>
+<!-- 搜索界面 -->
+<view wx:if="{{searchPanelShow}}">
+搜索
+</view>

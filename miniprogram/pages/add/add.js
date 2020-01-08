@@ -5,13 +5,46 @@ Page({
    * 页面的初始数据
    */
   data: {
-    loading: false,
-    color: '#000',
-    background: '#f8f8f8',
-    show: true,
-    animated: false
+    show: false,
+    containerShow: true,
+    searchPanelShow: false,
   },
 
+  //搜索
+  onSearch() {
+    this.setData({
+      containerShow: false,
+      searchPanelShow: true,
+    })
+  },
+
+  onCancel() {
+    this.setData({
+      containerShow: true,
+      searchPanelShow: false,
+    })
+  },
+  
+  //弹出层函数
+  showPopup() {
+    this.setData({ show: true });
+  },
+
+  onClose() {
+    this.setData({ show: false });
+  },
+
+  addPro:function(){
+    wx.navigateTo({
+      url: 'addPro/addPro',
+    })
+  },
+
+  addTask:function(){
+    wx.navigateTo({
+      url: 'addTask/addTask',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

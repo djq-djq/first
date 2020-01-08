@@ -1,19 +1,43 @@
-<!-- 顶部导航栏 -->
-<mp-navigation-bar loading="{{loading}}" show="{{show}}" animated="{{animated}}" color="{{color}}" background="{{background}}" title="项目" back="{{true}}"></mp-navigation-bar>
+<import src="../../template/pro-doing/pro-doing-template.wxml" />
+<import src="../../template/pro-finish/pro-finish-template.wxml" />
 
 <!-- 顶部搜索框 -->
 <van-search
   value="{{ value }}"
-  placeholder="请输入搜索项目关键词"
-  use-action-slot
+  placeholder="请输入搜索任务关键词"
+  show-action
   bind:search="onSearch"
->
- <view field-class="search" slot="action" bind:tap="onSearch">搜索</view>
-</van-search>
+  bind:cancel="onCancel"
+/>
 
 
 <!-- tab标签点击事件 -->
-<van-tabs color="#4682B4" bind:click="onClick">
-  <van-tab title="进行中">未完成项目列表</van-tab>
-  <van-tab title="已完成">已完成项目列表</van-tab>
+<van-tabs color="#4682B4" wx:if="{{containerShow}}" bind:click="onClick">
+	<van-tab title="进行中">
+		<block wx:for="{{pro_key}}" wx:for-item="item">
+			<view wx:if="{{item.pstatus==0}}">
+				<!-- task-item-template -->
+				<view catchtap="proTap" data-proId="{{item.proId}}">
+					<template is="pro-doing" data="{{...item}}" />
+				</view>
+			</view>
+		</block>
+	</van-tab>
+
+	<van-tab title="已完成">
+		<block wx:for="{{pro_key}}" wx:for-item="item">
+			<view wx:if="{{item.pstatus}}">
+				<!-- task-item-template -->
+        <!-- data-proId data- 自定义属性 -->
+				<view catchtap="proTap" data-proId="{{item.proId}}">
+					<template is="pro-finish" data="{{...item}}" />
+				</view>
+			</view>
+		</block>
+	</van-tab>
 </van-tabs>
+
+<!-- 搜索界面 -->
+<view wx:if="{{searchPanelShow}}">
+sousuo
+</view>

@@ -1,0 +1,55 @@
+<view class="detail-container">
+  <view class="title">{{taskData.taskName}}</view>
+  <view class="line">
+    <text class="content">状态：</text>
+    <Select prop-array='{{selectArray}}' bind:myget='getStatus'></Select>
+  </view>
+  <view class="line"><text class="content">所属项目：</text><text class="data">{{taskData.proName}}</text></view>
+  <view class="line"><text class="content">所属阶段：</text><text class="data">{{taskData.step}}</text></view>
+  <view class="line"><text class="content">任务类型：</text><text class="data">{{taskData.taskSort}}</text></view>
+  <view class="line"><text class="content">计划开始时间：</text><text class="data">{{taskData.startDate}}</text></view>
+  <view class="line"><text class="content">计划结束时间：</text><text class="data1">{{taskData.endDate}}</text></view>
+  <view class="line"><text class="content">任务成员：</text><text class="data">{{taskData.taskMate}}</text></view>
+  <view class="line"><text class="content">任务负责人：</text><text class="data">{{taskData.managerName}}</text></view>
+</view>
+
+<view class="detail-container">
+  <form bindsubmit="reportSubmit">
+    <view class="report">
+      <text class="sczb">上传周报</text>
+      <text class="weekend">第二周</text>
+    </view>
+
+
+    <view class="line">
+      <view class="content">本周工作量:</view>
+      <view class="biankuang">
+        <input name="weekWorkhour" maxlength="5" bindinput="weekWorkHourInput" placeholder="例如3（小时）"/>
+      </view>
+    </view>
+
+    <view class="line">
+      <view class="content">任务完成比:</view>
+      <view class="biankuang">
+        <input name="finishRate" maxlength="5" bindinput="finishRateInput" placeholder="例如60%"/>
+      </view>
+    </view>
+
+    <view >
+      <view class="content1">周报详情:</view>
+      <view class="biankuang1">
+        <textarea name="report" auto-height placeholder="填写周报内容或上传周报" bindinput="reportInput"/>
+      </view>
+    </view>
+
+    <view class="line">
+      <view class="uploadFile" catchtap="upLoadAction">
+      上传周报</view>
+    </view>
+
+    <view>
+      <button class="btn-area" formType="submit">发布</button>
+    </view>
+
+  </form>
+</view>

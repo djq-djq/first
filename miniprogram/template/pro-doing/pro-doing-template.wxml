@@ -1,11 +1,8 @@
-<template name="task-doing">
+<template name="pro-doing">
   <view class="list-container">
     <view class="taskAndPro">
-      <image class="taskImg" src="../../images/renwu1.png" />
+      <image class="taskImg" src="../../images/xiangmu.png" />
       <view>
-        <view class="taskName">
-          <text>{{taskName}}</text>
-        </view>
         <view class="proName">
           <text>{{proName}}</text>
         </view>
@@ -20,19 +17,19 @@
           <text style=" font-size: 30rpx; color:#ebc23d;font-weight:bold">进行中</text>
 
           <view class="status-date">
-            <text>截止日期：{{endDate}}</text>
+            <text>截止日期：{{pendDate}}</text>
           </view>
         </view>
       </view>
 
       <view class="manager">
-        <image class="managerImg" src="{{managerImg}}" />
+        <image class="managerImg" src="{{pmanagerImg}}" />
         <view>
           <view>
-            <text class="manager-content">任务负责人</text>
+            <text class="manager-content">项目负责人</text>
           </view>
           <view class="manager-name">
-            <text>{{managerName}}</text>
+            <text>{{pmanagerName}}</text>
           </view>
         </view>
         <image class="more" src="../../images/more.png" />

@@ -1,0 +1,99 @@
+<view class="addp-container">
+	<form bindsubmit="addTSubmit">
+
+		<view class="line">
+			<view class="content">任务名称:</view>
+			<view class="biankuang">
+				<input name="taskName"  bindinput="bindtaskNameInput" placeholder="请输入任务名称"/>
+			</view>
+		</view>
+
+		<view class="line">
+			<text class="content">状态：</text>
+			<Select prop-array='{{statusArray}}' bind:myget='getStatus'></Select>
+		</view>
+
+		<view class="line">
+			<text class="content">所属项目：</text>
+			<Select prop-array='{{proArray}}' bind:myget='getPro'></Select>
+		</view>
+
+		<view class="line">
+			<text class="content">所属阶段：</text>
+			<Select prop-array='{{stepArray}}' bind:myget='getStep'></Select>
+		</view>
+
+		<view class="line">
+			<text class="content">任务类型：</text>
+			<Select prop-array='{{taskSortArray}}' bind:myget='gettaskSort'></Select>
+		</view>
+
+		<view class="line">
+			<view class="content">计划开始时间:  </view>
+			<view>
+				<picker class="biankuang" name="startDate" mode="date" value="{{startDate}}" start="2019-09-01" end="2050-09-01" bindchange="bindstartDateChange">{{startDate}}
+				</picker>
+			</view>	
+		</view>
+
+		<view class="line">
+			<view class="content">计划结束时间:  </view>
+			<view>
+				<picker class="biankuang" name="endDate" mode="date" value="{{endDate}}" start="2019-09-01" end="2050-09-01" bindchange="bindendDateChange">{{endDate}}
+				</picker>
+			</view>	
+		</view>
+
+
+
+		<view class="line">
+			<view class="content">任务负责人:</view>
+			<view class="biankuang">
+				<input name="managerName"  bindinput="bindmanagerNameInput" placeholder="请输入任务负责人名称"/>
+			</view>
+		</view>
+
+
+
+
+		<view class="table-container">	
+			<block wx:for="{{tables}}" wx:for-item="table" wx:for-index="table_index">
+
+				<view class="tr" >
+					<view class="td" wx:for="{{table}}" wx:item="item" bindtap="openModel" data-id="{{table_index}}">{{item}}</view>
+				</view>
+			</block>
+			<view class="control-container" bindtap="openAddModel">
+				添加行
+			</view>
+
+			<button  class="btn"  type="success" bindtap="clearModel" class="submit-btn">清空表格</button>
+		</view>
+
+		<view wx:if="{{show}}" class="mask-form">
+			<view class="mask-content-container" wx:for="{{cols}}" wx:for-item="col" wx:for-index="col_index">
+				<text class="list-mask-title">{{titles[col_index]}}</text>
+				<input class="list-mask-input" type="text" value="{{col}}" data-id="{{col_index}}" bindblur="dataChange" />
+			</view>
+			<button class="btn btn-confirm" type="success" bindtap="editModel">确认</button>
+			<button class="btn btn-confirm" type="warn" bindtap="deleteModel">删除本行</button>    
+			<button class="btn btn-cancle" type="default" bindtap="closeModel">取消</button>
+		</view>
+
+		<view wx:if="{{create}}" class="mask-form">
+			<view class="mask-content-container" wx:for="{{cols}}" wx:for-item="col" wx:for-index="col_index">
+				<text class="list-mask-title">{{titles[col_index]}}</text>
+				<input class="list-mask-input" type="text" value="{{col}}" data-id="{{col_index}}" bindblur="dataChange" />
+			</view>
+			<button class="btn btn-confirm" type="success" bindtap="addModel">确认</button>
+			<button class="btn btn-cancle" type="default" bindtap="closeModel">取消</button>
+		</view>
+
+
+
+		<view>
+			<button class="btn-area" formType="submit">发布</button>
+		</view>
+
+	</form>
+</view>

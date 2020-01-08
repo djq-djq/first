@@ -1,11 +1,8 @@
-<template name="task-finish">
+<template name="pro-finish">
 <view class="list-container">
     <view class="taskAndPro">
-      <image class="taskImg" src="../../images/renwu1.png" />
+      <image class="taskImg" src="../../images/xiangmu.png" />
       <view>
-        <view class="taskName">
-          <text>{{taskName}}</text>
-        </view>
         <view class="proName">
           <text>{{proName}}</text>
         </view>
@@ -17,22 +14,22 @@
         <image class="statusImg" src="../../images/finish.png" />
         <view>
           <view class="status-finish">
-            <text style="font-size:30rpx;color:#00aa00;font-weight:bold">已完成</text>
+            <text style="font-size: 30rpx;color:#00aa00;font-weight:bold">已完成</text>
           </view>
           <view class="status-date">
-            <text>完成日期：{{finishDate}}</text>
+            <text>完成日期：{{pfinishDate}}</text>
           </view>
         </view>
       </view>
 
       <view class="manager">
-        <image class="managerImg" src="{{managerImg}}" />
+        <image class="managerImg" src="{{pmanagerImg}}" />
         <view>
           <view>
-            <text class="manager-content">任务负责人</text>
+            <text class="manager-content">项目负责人</text>
           </view>
           <view class="manager-name">
-            <text>{{managerName}}</text>
+            <text>{{pmanagerName}}</text>
           </view>
         </view>
         <image class="more" src="../../images/more.png" />
